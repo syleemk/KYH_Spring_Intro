@@ -5,6 +5,7 @@ import hello.hellospring.repository.MemberRepository;
 import hello.hellospring.repository.MemoryMemberRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
@@ -13,6 +14,12 @@ import java.util.Optional;
 // 서비스 클래스는 메서드 네이밍이 좀 더 비즈니스에 가까움
 // 서비스는 비즈니스에 가까운 네이밍 써야함
 //@Service // 스프링 컨테이너에 멤버서비스 등록
+@Transactional
+/**
+ * Jpa 쓰려면 항상 transactional있어야함
+ * 데이터를 저장하거나 변경할 때는 transactional 있어야함
+ * Jpa는 모든 데이터 변경이 트랜잭션 안에서 실행되어야함
+ */
 public class MemberService {
 
     private final MemberRepository memberRepository;// = new MemoryMemberRepository();
