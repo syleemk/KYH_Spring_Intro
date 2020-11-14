@@ -15,6 +15,8 @@ import static org.junit.jupiter.api.Assertions.*;
  * 어차피 빌드될 때 포함되는 코드도 아니고
  * 직관적으로 알아보기 쉬운 것이 좋음
  */
+// 순수 자바 코드로만 되어있는 테스트
+// JVM 위에서만 동작하니까 굉장히 빨리 실행
 class MemberServiceTest {
 
     MemberService memberService;// = new MemberService();
