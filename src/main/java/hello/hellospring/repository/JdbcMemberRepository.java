@@ -11,7 +11,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-@Repository
 public class JdbcMemberRepository implements MemberRepository{
 
     //db에 붙으려면 datasource 필요함
